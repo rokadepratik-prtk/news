@@ -4,11 +4,13 @@ services:
   web:
     build: .
     ports:
-      - "8081:80"        # Access app at http://localhost:8080
+      - "8081:80"
     volumes:
-      - .:/var/www/html  # Mount your project folder into container
+      - .:/var/www/html
     depends_on:
       - db
+    command: bash -c "sleep 20 && apache2-foreground"
+
 
   db:
     image: mysql:8.0
