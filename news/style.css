@@ -1,0 +1,280 @@
+
+    body {
+        font-family: 'Arial', sans-serif;
+        color: #040404;
+    }
+    
+    .navbar-custom {
+        background-color: #295850e9;
+    }
+
+    .navbar-custom .nav-link {
+        color: #ffffff;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-custom .nav-link:hover {
+        color: #ffcc00;
+    }
+
+    .header-title {
+        background: linear-gradient(135deg, #f66e06, #dd2476);
+        color: #fff;
+        padding: 60px 15px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .header-title::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 200%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-30deg);
+        animation: slide 2s infinite linear;
+    }
+
+    .animated-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slide {
+        0% { left: -50%; }
+        100% { left: 100%; }
+    }
+
+    .advertisement-section {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .ad-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .ad-content p {
+        font-size: 0.9rem;
+    }
+
+    .ad-btn {
+        display: inline-block;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+        background-color: #ff512f;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    /* .ad-btn:hover {
+        background-color: #b4fa10;
+       
+    } */
+
+    .footer {
+        background-color: #343a40;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .news-item img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .news-item h5 {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .header-title {
+            padding: 40px 15px;
+        }
+
+        .animated-title {
+            font-size: 2rem;
+        }
+
+        .ad-btn {
+            padding: 6px 12px;
+            font-size: 0.7rem;
+        }
+    }
+
+
+
+    /* Custom button styling */
+.custom-read-more-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;  /* Rounded corners */
+    background: linear-gradient(45deg, #f66e06, #dd2476); /* Gradient background */
+    border: none;  /* Remove default border */
+    color: #fff;  /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.custom-read-more-btn:hover {
+    background-color: #e63946;  /* Hover effect */
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+}
+
+
+.letters ::first-letter {
+    font-size: 200%;
+    color: #f66e06;
+  }
+
+
+
+
+
+
+
+
+
+  
+        /* Header Styling */
+        .header-title {
+            background: linear-gradient(135deg, #f66e06, #dd2476);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            height: 100px; /* Original height */
+            transition: height 0.5s ease, padding 0.5s ease; /* Smooth transition for height and padding */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            width: 100%;
+            margin-bottom: 20px; /* Space for navbar */
+        }
+
+        /* Reduced height on scroll */
+        .header-title.shrink {
+            height: 60px; /* 70% reduction */
+            padding: 10px; /* Reduce padding to match smaller height */
+            margin-bottom: 10px; /* Reduce margin bottom when shrunk */
+        }
+
+        /* Navbar Custom Styles */
+        .navbar-custom {
+            background-color: #295850e9;
+            margin-top: 100px; /* Adjust margin for content shift after header shrinks */
+            transition: margin-top 0.5s ease; /* Smooth transition for navbar position */
+        }
+
+        .shrink + .navbar-custom {
+            margin-top: 60px; /* Adjust the navbar position to stay visible when header shrinks */
+        }
+
+
+   
+        /* Footer Styling */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Additional spacing for content */
+        .content-section {
+            margin-top: 10px; /* Adjust to account for the header height */
+            transition: margin-top 0.5s ease; /* Smooth transition for content shift */
+        }
+
+        .shrink ~ .content-section {
+            margin-top: 120px; /* Adjust content margin after header shrinks */
+        }
+        
+        .custom-img {
+    max-width: 80%;  /* Reduce the width of the image to 80% */
+    max-height: 300px;  /* Set a fixed max height for better control */
+    object-fit: cover;  /* Ensures the image covers the container while maintaining aspect ratio */
+    border-radius: 10px;
+}
+
+    
+
+
+     /* News Item Styling */
+     .news-item-wrapper {
+        /* background-color:#f66e06; */
+        border-radius: 15px;
+        /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); */
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+       
+    
+    }
+
+    .news-item-wrapper:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      
+    }
+
+   
+
+   
+    .custom-img {
+        max-width: 100%;  /* Ensures the image is fully responsive */
+        height: auto;     /* Maintain the aspect ratio */
+        border-radius: 10px;
+        object-fit: contain;
+         /* Prevents cropping, scales down the image */
+    }
+
+    .img-thumbnail {
+        padding: 5px;
+        border: 2px solid #ddd;
+        transition: all 0.3s ease;
+    }
+
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+        .custom-img {
+            max-height: none;  /* Removes height restriction on smaller screens */
+            width: 100%;  /* Ensures the image takes up the full width */
+        }
+    }
+
+    /* Additional Styles */
+    body {
+        background-color: #f4f4f9;
+    }
+    .letters ::first-letter {
+    font-size: 200%;
+    color: #f66e06;
+  }
+
+ 

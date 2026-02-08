@@ -1,0 +1,59 @@
+      /* Styling the Navbar */
+        .navbar-custom {
+            background-color: #dc4c64; /* Primary Blue */
+            padding: 1rem;
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #fed906 !important; /* Lighter white on hover */
+            text-decoration: underline;
+        }
+
+        .navbar-custom .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+     
+
+        /* Additional styling for active and hover states */
+        .navbar-custom .nav-item.active .nav-link {
+            color: #ffcc00 !important; /* Yellow for active link */
+        }
+
+        /* Responsive padding */
+        @media (max-width: 991px) {
+            .navbar-custom .nav-link {
+                padding: 0.75rem 1.25rem;
+            }
+        }
+        @media (max-width: 768px) {
+            table {
+              width: 100%;
+              overflow-x: auto;
+              display: block;
+            }
+          }
+/* Custom button styling */
+.custom-read-more-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;  /* Rounded corners */
+    background: linear-gradient(45deg, #f66e06, #dd2476); /* Gradient background */
+    border: none;  /* Remove default border */
+    color: #fff;  /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.custom-read-more-btn:hover {
+    background-color: #e63946;  /* Hover effect */
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+}
+
