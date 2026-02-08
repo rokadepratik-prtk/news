@@ -1,5 +1,6 @@
 # Use official PHP image with Apache
 FROM php:8.2-apache
+RUN apt-get update && apt-get install -y default-mysql-client iputils-ping
 
 # Install PHP extensions needed for MySQL
 RUN docker-php-ext-install mysqli pdo pdo_mysql
