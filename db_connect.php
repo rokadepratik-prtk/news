@@ -1,12 +1,7 @@
 <?php
-$servername = "db";          // Docker Compose service name
-$username   = "newsuser";    // from docker-compose.yml
-$password   = "newpassword"; // from docker-compose.yml
-$dbname     = "newsdb";      // from docker-compose.yml
+$conn = new mysqli("db", "newsuser", "newpassword", "newsdb");
 
-$cn = new mysqli($servername, $username, $password, $dbname);
-
-if ($cn->connect_error) {
-    die("Connection failed: " . $cn->connect_error);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 ?>
