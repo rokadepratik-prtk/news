@@ -9,7 +9,8 @@ services:
       - .:/var/www/html
     depends_on:
       - db
-    command: bash -c "sleep 20 && apache2-foreground"
+  command: bash -c "sleep 40 && apache2-foreground"
+
 
 
   db:
